@@ -138,7 +138,7 @@ with st.sidebar:
         st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png", width=100)
     with col3:
         # Date Range
-        start_date, end_date = st.write(
+        start_date, end_date = st.date(
             label="Select Date Range",
             value=[min_date, max_date],
             min_value=min_date,
