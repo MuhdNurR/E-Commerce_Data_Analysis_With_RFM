@@ -131,8 +131,6 @@ max_date = all_df["order_approved_at"].max()
 
 # Sidebar
 with st.sidebar:
-    # Sidebar
-with st.sidebar:
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.write(' ')
@@ -142,7 +140,6 @@ with st.sidebar:
         st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png", width=100)
     with col4:
         st.write(' ')
-
 
     # Date Range
     start_date, end_date = st.date_input(
