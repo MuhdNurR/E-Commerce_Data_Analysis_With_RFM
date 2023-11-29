@@ -135,7 +135,7 @@ with st.sidebar:
     with col1:
         st.write(' ')
     with col2:
-        st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png", width=100)
+        st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png")
     with col3:
         st.write(' ')
 
