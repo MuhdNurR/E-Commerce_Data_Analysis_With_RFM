@@ -139,10 +139,6 @@ with st.sidebar:
     with col3:
         st.write('2016/09/15 – 2018/08/29')
 
-# Main
-main_df = all_df[(all_df["order_approved_at"] >= str(start_date)) &
-                 (all_df["order_approved_at"] <= str(end_date))]
-
 function = DataAnalyzer(main_df)
 map_plot = BrazilMapPlotter(data, plt, mpimg, urllib, st)
 
