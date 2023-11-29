@@ -120,7 +120,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 rfm=create_rfm(all_df)
 
 # Geolocation Dataset
-geolocation = pd.read_csv('geolocation.csv')
+geolocation = pd.read_csv('dashboard/geolocation.csv')
 data = geolocation.drop_duplicates(subset='customer_unique_id')
 
 for col in datetime_cols:
