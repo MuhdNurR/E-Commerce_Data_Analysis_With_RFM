@@ -137,7 +137,17 @@ with st.sidebar:
     with col2:
         st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png", width=100)
     with col3:
-        st.write('2016/09/15 – 2018/08/29')
+    # Date Range
+    start_date, end_date = st.write(
+        label="Select Date Range",
+        value=[min_date, max_date],
+        min_value=min_date,
+        max_value=max_date
+    )
+
+# Main
+main_df = all_df[(all_df["order_approved_at"] >= str(start_date)) &
+                 (all_df["order_approved_at"] <= str(end_date))]
 
 function = DataAnalyzer(main_df)
 map_plot = BrazilMapPlotter(data, plt, mpimg, urllib, st)
