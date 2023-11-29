@@ -138,10 +138,11 @@ with st.sidebar:
         st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png", width=100)
     with col3:
         # Date Range
-        selected_date_range_text = st.text_input(
+        start_date, end_date = st.date_input(
             label="Select Date Range",
-            value=f"{start_date} to {end_date}",
-            key="date_range_text"
+            value=[min_date, max_date],
+            min_value=min_date,
+            max_value=max_date
         )
 
 # Main
