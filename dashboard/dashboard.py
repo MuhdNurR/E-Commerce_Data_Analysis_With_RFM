@@ -137,13 +137,15 @@ with st.sidebar:
     with col2:
         st.image("https://github.com/dicodingacademy/assets/raw/main/logo.png", width=100)
     with col3:
-        # Date Range
-        start_date, end_date = st.date_input(
-            label="Select Date Range",
-            value=[min_date, max_date],
-            min_value=min_date,
-            max_value=max_date
-        )
+        st.write(' ')
+
+    # Date Range
+    start_date, end_date = st.date_input(
+        label="Select Date Range",
+        value=[min_date, max_date],
+        min_value=min_date,
+        max_value=max_date
+    )
 
 # Main
 main_df = all_df[(all_df["order_approved_at"] >= str(start_date)) &
